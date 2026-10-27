@@ -1,0 +1,12 @@
+.vscode/**
+.github/**
+node_modules/**
+scripts/**
+test/**
+sublime/**
+examples/**
+assets/*.vectorcraft
+assets/.DS_Store
+**/.DS_Store
+*.vsix
+.gitignore

@@ -3,3 +3,4 @@ dist
 plugin.zip
 .DS_Store
 *.vectorcraft
+*.vsix

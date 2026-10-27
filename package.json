@@ -1,0 +1,131 @@
+{
+  "name": "regular-expression",
+  "displayName": "Regular Expression",
+  "description": "Regular Expression language (syntax highlighting and completions) adapted from the Sublime Text definitions used by Textastic",
+  "version": "1.0.0",
+  "publisher": "richnsd",
+  "author": "RichNSD",
+  "license": "MIT",
+  "private": true,
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichNSD/VSCode-Regex.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "regex",
+    "regexp",
+    "regular expression",
+    "pcre",
+    "sublime",
+    "textastic",
+    "syntax"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:regexp",
+    "onLanguage:regexp-javascript",
+    "onLanguage:regexp-python"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "regexp",
+        "aliases": [
+          "Regular Expression",
+          "regex",
+          "pcre"
+        ],
+        "extensions": [
+          ".re",
+          ".regex"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./assets/icon.svg",
+          "dark": "./assets/icon.svg"
+        }
+      },
+      {
+        "id": "regexp-javascript",
+        "aliases": [
+          "Regular Expression (JavaScript)"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./assets/icon.svg",
+          "dark": "./assets/icon.svg"
+        }
+      },
+      {
+        "id": "regexp-python",
+        "aliases": [
+          "Regular Expression (Python)"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./assets/icon.svg",
+          "dark": "./assets/icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "regexp",
+        "scopeName": "source.regexp",
+        "path": "./syntaxes/regexp.tmLanguage.json",
+        "tokenTypes": {
+          "constant.character.escape": "string",
+          "meta.set.regexp": "string",
+          "keyword.control.set.regexp": "other",
+          "constant.other.character-class.set.regexp": "string",
+          "punctuation.definition.character-class": "other"
+        }
+      },
+      {
+        "language": "regexp-javascript",
+        "scopeName": "source.regexp.js",
+        "path": "./syntaxes/regexp-javascript.tmLanguage.json",
+        "tokenTypes": {
+          "constant.character.escape": "string",
+          "meta.set.regexp": "string",
+          "keyword.control.set.regexp": "other",
+          "constant.other.character-class.set.regexp": "string",
+          "punctuation.definition.character-class": "other"
+        }
+      },
+      {
+        "language": "regexp-python",
+        "scopeName": "source.regexp.py",
+        "path": "./syntaxes/regexp-python.tmLanguage.json",
+        "tokenTypes": {
+          "constant.character.escape": "string",
+          "meta.set.regexp": "string",
+          "keyword.control.set.regexp": "other",
+          "constant.other.character-class.set.regexp": "string",
+          "punctuation.definition.character-class": "other"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build-grammars.mjs",
+    "test": "node scripts/build-grammars.mjs --check && node --test \"test/*.test.mjs\"",
+    "test:vscode": "node test/vscode/run.mjs",
+    "package": "vsce package",
+    "vscode:prepublish": "node scripts/build-grammars.mjs --check"
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.9.2",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  }
+}
