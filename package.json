@@ -1,8 +1,8 @@
 {
-  "name": "regular-expression",
-  "displayName": "Regular Expression",
+  "name": "regex-syntax",
+  "displayName": "Regex Syntax",
   "description": "Regular Expression language (syntax highlighting and completions) adapted from the Sublime Text definitions used by Textastic",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "richnsd",
   "author": "RichNSD",
   "license": "MIT",

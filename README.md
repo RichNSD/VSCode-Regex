@@ -1,28 +1,15 @@
 # Regular Expression for VS Code
 
-A **Regular Expression** language for VS Code, adapted from the Sublime Text
-definitions that Textastic uses. Open a `.re` or `.regex` file and you get
-syntax highlighting for the regex itself, as a scratchpad for writing and
-checking long expressions. It doesn't run, test or evaluate anything, and it
-doesn't add highlighting to other languages.
+A **Regular Expression** language for VSCode, adapted from the Sublime Text definitions that Textastic uses. Open a `.re` or `.regex` file and you get syntax highlighting for the regex itself, as a scratchpad for writing and checking long expressions. It doesn't run, test or evaluate anything, and it doesn't add highlighting to other languages.
 
-This is the VS Code companion to the
-[Acode plugin](https://github.com/RichNSD/Acode-Regex) and behaves the same way.
+This is the VSCode companion to the [Acode plugin](https://github.com/RichNSD/Acode-Regex) and (generally) behaves the same way.
 
 ## Features
 
-- **Highlighting** from the original `RegExp.sublime-syntax` (PCRE syntax, the
-  definition Sublime and Textastic bind to `.re`), including:
-  groups, named groups, lookarounds, inline modes such as `(?i)`, conditionals,
-  recursion, backtracking verbs, character sets with ranges and POSIX classes,
-  escapes, quantifiers (lazy and possessive), back-references, `(?#…)` comments,
-  `#` comments in `(?x)` mode, and errors such as a leading quantifier or an
-  unmatched `)`.
+- **Highlighting** from the original `RegExp.sublime-syntax` (PCRE syntax, the definition Sublime and Textastic bind to `.re`), including:
+  groups, named groups, lookarounds, inline modes such as `(?i)`, conditionals, recursion, backtracking verbs, character sets with ranges and POSIX classes, escapes, quantifiers (lazy and possessive), back-references, `(?#…)` comments, `#` comments in `(?x)` mode, and errors such as a leading quantifier or an unmatched `)`.
 - **File types:** `.re` (from the Sublime definition) and `.regex`.
-- **Other flavours:** *Regular Expression (JavaScript)* and *Regular Expression
-  (Python)* come from Sublime's two embedded regex syntaxes. They aren't tied to
-  a file extension. Choose them with **Change Language Mode**, or map your own
-  extensions with `files.associations`:
+- **Other flavours:** *Regular Expression (JavaScript)* and *Regular Expression (Python)* come from Sublime's two embedded regex syntaxes. They aren't tied to a file extension. Choose them with **Change Language Mode**, or map your own extensions with `files.associations`:
   ```json
   "files.associations": { "*.jsre": "regexp-javascript", "*.pyre": "regexp-python" }
   ```
@@ -37,13 +24,16 @@ This is the VS Code companion to the
 - **File icon** for regex files in the Explorer and tabs. File icon themes that
   have no icon of their own for these files fall back to it, including the
   default Seti theme.
-- **Brackets:** `(`, `[` and `{` auto-close, but quotes don't, because quotes
-  in a regex are literal characters. Escaped brackets such as `\(` and brackets
-  inside sets such as `[(]` are ignored when matching and colourising bracket
-  pairs.
+- **Brackets:** `(`, `[` and `{` auto-close, but quotes don't, because quotes in a regex are literal characters. Escaped brackets such as `\(` and brackets inside sets such as `[(]` are ignored when matching and colourising bracket pairs.
 
 Colours come from your VS Code theme, which applies them to the Sublime scope
 names directly, as Textastic does.
+
+> [!info] AI Transparency Notice
+> This is my first time building an extension/plugin for either Acode or VSCode and I'm trying to use these extensions as a learning experience. So far all of my (self-taught) coding experience has been in the troubleshooting, editing, and fixing of things other people have built from scratch. So, I will admit that Claude Code has done basically all of the work during the initial builds on both versions of this extension as I learn how everything works. However, going forward, the goal is to use as little AI as possible because my goal is to learn how to *actually* be a developer. 
+>
+> The logo/icon is something I designed myself though. :sunglasses: The design files are free for anyone to use and play with in the repo, you can find them in the `/design` folder, and you can edit them with the awesome new open-source version of Adobe Illustrator: [VectorCraft](https://getartcraft.com/apps/vectorcraft)
+
 
 ## Build and install
 
