@@ -29,7 +29,11 @@
     "syntax"
   ],
   "main": "./src/extension.js",
-  "activationEvents": [],
+  "activationEvents": [
+    
+    
+    
+  ],
   "contributes": {
     "languages": [
       {
