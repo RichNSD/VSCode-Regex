@@ -29,7 +29,8 @@ This is the VSCode companion to the [Acode plugin](https://github.com/RichNSD/Ac
 Colours come from your VS Code theme, which applies them to the Sublime scope
 names directly, as Textastic does.
 
-> [!info] AI Transparency Notice
+> [!IMPORTANT] 
+> ### AI Transparency Notice
 > This is my first time building an extension/plugin for either Acode or VSCode and I'm trying to use these extensions as a learning experience. So far all of my (self-taught) coding experience has been in the troubleshooting, editing, and fixing of things other people have built from scratch. So, I will admit that Claude Code has done basically all of the work during the initial builds on both versions of this extension as I learn how everything works. However, going forward, the goal is to use as little AI as possible because my goal is to learn how to *actually* be a developer. 
 >
 > The logo/icon is something I designed myself though. :sunglasses: The design files are free for anyone to use and play with in the repo, you can find them in the `/design` folder, and you can edit them with the awesome new open-source version of Adobe Illustrator: [VectorCraft](https://getartcraft.com/apps/vectorcraft)
