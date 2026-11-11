@@ -5,7 +5,7 @@ A **Regular Expression** language for **VSCode**, adapted from the **Sublime Tex
 This is the VSCode companion to the [Acode plugin](https://github.com/RichNSD/Acode-Regex) and (generally) behaves the same way.
 
 <details>
-<summary><h2>Table of Contents</h2></summary>
+<summary><h2 style="display: inline">Table of Contents</h2></summary>
 
   - [Features](#features)
     - [Syntax Highlighting](#syntax-highlighting)
